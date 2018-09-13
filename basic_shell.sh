@@ -6,6 +6,8 @@ read -p "enter a string " name # To read i/p from StdIn and store it in a name v
 echo $name 
 echo $@ # print all args passed
 echo $0 # print first arg which is the function name 
+echo $? # return the status of last executed cmd 
+echo $$ # PID of the current process.
 set +x # turn of debugging mode
 #ls "/abc"  uncomment this line to simulate non zero exit status
 function test(){
