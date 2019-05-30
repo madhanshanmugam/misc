@@ -32,3 +32,12 @@ function test(){
 
 test $@ # function with arguments
 echo $? # return status of last executed command 
+
+# To read content from a file use while loop
+#sample file names.txt
+#suresh kumar
+#rames kumar
+while read -r first_name last_name; # if name is suresh,kumar then need use IFS like while IFS="," read -r ...
+do
+	echo $first_name
+done < names.txt # Here it works like contents of the names is read and being feed to the next step read function like using pipe symbol
